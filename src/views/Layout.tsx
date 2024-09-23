@@ -9,10 +9,13 @@ interface LayoutProps {
 
 const Layout = ({children} : LayoutProps) => {
     return (
-        <>
+        <div className="grid">
             <Header></Header>
             <main>{children}</main>
             <Footer></Footer>
-        </>
+        </div>
     )
 }
+
+
+export default Layout

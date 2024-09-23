@@ -1,12 +1,12 @@
 import React from 'react';
-import Layout from "./Layout";
-import Login from "./Login";
+import Layout from "../views/Layout";
+
 
 
 const Home = () => {
     return (
         <Layout>
-            <Login></Login>
+        <h1>Hoi</h1>
         </Layout>
 
     )
