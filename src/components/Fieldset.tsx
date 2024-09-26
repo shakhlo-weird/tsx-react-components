@@ -1,31 +1,16 @@
-import React, {useState} from "react";
+import React, { ReactNode  } from "react";
 
 interface FieldsetProps {
-    id: string;
-    type: string;
-    placeholder: string;
+    children?: ReactNode;
 }
 
-const Fieldset = ({id, type, placeholder} : FieldsetProps) => {
-
-    const [value, setValue] = useState('')
-    const handleChange = (e : React.ChangeEvent<HTMLInputElement>)=>{
-        setValue(e.target.value)
-    }
+const Fieldset = ({ children }: FieldsetProps) => {
 
     return (
-        <fieldset>
-            <label htmlFor={id}>
-                <input
-                    id={id}
-                    type={type}
-                    placeholder={placeholder}
-                    value={value}
-                    onChange={handleChange}
-                />
-            </label>
+        <fieldset className="relative mb-6 mt-3">
+            {children}
         </fieldset>
     )
-}
+};
 
 export default Fieldset;
